@@ -9,7 +9,7 @@ const async = loadLib('async');
 const cutils = loadLib('cutils');
 const EventEmitter = loadLib('events').EventEmitter;
 
-exports = module.exports = utils.class({
+exports = module.exports = cutils.class({
 	init: function (ossConfig) {
 		this.client = ALY.CDN(ossConfig);
 	}
