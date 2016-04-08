@@ -11,7 +11,7 @@ const EventEmitter = loadLib('events').EventEmitter;
 
 exports = module.exports = cutils.class({
 	init: function (ossConfig) {
-		this.client = ALY.CDN(ossConfig);
+		this.client = new ALY.CDN(ossConfig);
 	}
 }, EventEmitter);
 
