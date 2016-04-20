@@ -21,7 +21,7 @@
   "author": "zsl@kuba.bz",
   "license": "MIT",
   "dependencies": {
-    "aliyun-sdk": "^1.8.6",
-    "iooly-cornerstone": "^1.0.2"
+    "aliyun-sdk": "^1.8.9",
+    "iooly-cornerstone": "^1.1.12"
   }
 }

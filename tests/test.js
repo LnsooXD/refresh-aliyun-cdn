@@ -1,2 +1,3 @@
 require('iooly-cornerstone');
-var Oss = loadLib('./oss');
+const cdn = loadLib('../cdn');
+console.log(cdn.co);
