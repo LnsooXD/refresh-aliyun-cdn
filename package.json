@@ -1,6 +1,6 @@
 {
   "name": "iooly-aliyun-cdn",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "简化的cdn sdk",
   "main": "cdn.js",
   "scripts": {
@@ -21,7 +21,10 @@
   "author": "zsl@kuba.bz",
   "license": "MIT",
   "dependencies": {
-    "aliyun-sdk": "^1.8.9",
+    "aliyun-sdk": "^1.9.1",
     "iooly-cornerstone": "^1.1.12"
+  },
+  "devDependencies": {
+    "koa": "^1.2.0"
   }
 }
