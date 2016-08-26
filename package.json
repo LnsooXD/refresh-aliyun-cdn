@@ -1,5 +1,5 @@
 {
-  "name": "iooly-aliyun-cdn",
+  "name": "refresh-aliyun-cdn",
   "version": "1.0.0",
   "description": "simplify aliyun-sdk for refreshing aliyun CDN",
   "main": "refresh-aliyun-cdn.js",
