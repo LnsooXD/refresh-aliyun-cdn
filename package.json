@@ -1,30 +1,30 @@
 {
   "name": "iooly-aliyun-cdn",
-  "version": "1.0.3",
-  "description": "简化的cdn sdk",
-  "main": "cdn.js",
+  "version": "1.0.0",
+  "description": "simplify aliyun-sdk for refreshing aliyun CDN",
+  "main": "refresh-aliyun-cdn.js",
   "scripts": {
     "test": "node ./tests/test.js"
   },
   "repository": {
     "type": "git",
-    "url": "git@code.iooly.net:/node_modules/iooly-aliyun-cdn.git"
-  },
-  "publishConfig": {
-    "registry": "https://maven.iooly.net:8089/nexus/content/repositories/inpm/"
+    "url": "https://github.com/LnsooXD/refresh-aliyun-cdn.git"
   },
   "keywords": [
     "ali",
     "aliyun",
-    "cdn"
+    "cdn",
+    "refresh"
   ],
-  "author": "zsl@kuba.bz",
+  "author": "LnsooXD <lnsooxd@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "aliyun-sdk": "^1.9.1",
-    "iooly-cornerstone": "^1.1.12"
+    "aliyun-sdk": "^1.9.5"
   },
-  "devDependencies": {
-    "koa": "^1.2.0"
-  }
+  "files": [
+    "LICENSE",
+    "README.md",
+    "refresh-aliyun-cdn.js",
+    "lib"
+  ]
 }
