@@ -1,6 +1,6 @@
 {
   "name": "refresh-aliyun-cdn",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "simplify aliyun-sdk for refreshing aliyun CDN",
   "main": "refresh-aliyun-cdn.js",
   "scripts": {
