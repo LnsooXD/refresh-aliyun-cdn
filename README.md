@@ -19,8 +19,7 @@ simplify aliyun-sdk for refreshing aliyun CDN
 const cdn = new (loadLib('iooly-aliyun-cdn'))({
     "accessKeyId": "xxxxxxx",
     "secretAccessKey": "xxxxxxxxxxxxxx",
-    "endpoint": "https://cdn.aliyuncs.com",
-    "apiVersion": "2014-11-11"
+    "endpoint": "https://cdn.aliyuncs.com"
 });
 ```
 * ES5 Generator one
@@ -28,8 +27,7 @@ const cdn = new (loadLib('iooly-aliyun-cdn'))({
 const cdn = new (loadLib('iooly-aliyun-cdn').co)({
     "accessKeyId": "xxxxxxx",
     "secretAccessKey": "xxxxxxxxxxxxxx",
-    "endpoint": "https://cdn.aliyuncs.com",
-    "apiVersion": "2014-11-11"
+    "endpoint": "https://cdn.aliyuncs.com"
 });
 ```
 
@@ -38,7 +36,7 @@ Just find accessKeyId, secretAccessKey, endpoint and apiVersion in [aliyun-sdk]
 
 ##Installation
 ```shell
-$ npm install refresh-aliyun-cdn --save
+$ npm i -S refresh-aliyun-cdn
 ```
 
 ##Dependencies
