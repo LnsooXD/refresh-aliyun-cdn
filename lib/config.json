@@ -1,0 +1,11 @@
+{
+  "baseUrl": "https://cdn.aliyuncs.com/",
+  "apiVersion": "2014-11-11",
+  "format": "JSON",
+  "signatureVersion": "1.0",
+  "signatureMethod": "HMAC-SHA1",
+  "types": {
+    "file": "File",
+    "dir": "Directory"
+  }
+}
