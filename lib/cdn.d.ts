@@ -16,9 +16,9 @@ export declare class CDN {
     private baseUrl;
     private client;
     constructor(config: CDNConfig);
-    refreshFile(url: string): Promise<import("axios").AxiosResponse<any>>;
-    refreshDir(url: string): Promise<import("axios").AxiosResponse<any>>;
-    refreshFiles(urls: string[]): Promise<import("axios").AxiosResponse<any>[]>;
-    request(url: string, type: RefreshObjectType): Promise<import("axios").AxiosResponse<any>>;
+    refreshFile(url: string): Promise<import("axios").AxiosResponse<any, any>>;
+    refreshDir(url: string): Promise<import("axios").AxiosResponse<any, any>>;
+    refreshFiles(urls: string[]): Promise<import("axios").AxiosResponse<any, any>[]>;
+    request(url: string, type: RefreshObjectType): Promise<import("axios").AxiosResponse<any, any>>;
     private makeRefreshRequestParams;
 }
