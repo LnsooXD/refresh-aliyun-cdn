@@ -7,7 +7,7 @@ import { RefreshObjectType } from "./defines";
 import { AxiosInstance } from "axios";
 export interface CDNConfig {
     accessKeyId: string;
-    secretAccessKey: string;
+    accessKeySecret: string;
     endpoint?: string;
     client?: AxiosInstance;
 }

@@ -15,11 +15,19 @@ simplify aliyun-sdk for refreshing aliyun CDN
 ### 1. Get the cdn instance
 
 ```js
-const cdn = new (loadLib('iooly-aliyun-cdn'))({
-    "accessKeyId": "xxxxxxx",
-    "secretAccessKey": "xxxxxxxxxxxxxx",
-    "endpoint": "https://cdn.aliyuncs.com"
+import { CDN } from 'refresh-aliyun-cdn';
+
+const cdn = new CDN({
+  accessKeyId: "a key",
+  accessKeySecret: "a secret",
+  endpoint: "https://cdn.aliyuncs.com"
 });
+
+(async () => {
+  const res = await cdn.refreshFile("a url");
+  console.log(res.data);
+})();
+
 ```
 
 ### 2. refresh object

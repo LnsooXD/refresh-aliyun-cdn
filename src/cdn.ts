@@ -7,17 +7,15 @@
 "use strict";
 
 import libConfig from "./config";
-import d3 = require("d3-time-format");
+import {timeFromat} from "./time-fromat";
 import { v4 as signatureNonce } from "uuid";
 import { RefreshRequestParams, RefreshObjectType } from "./defines";
 import Axios, { AxiosInstance } from "axios";
 import { signRequest } from "./util";
 
-const timeFromat = d3.utcFormat("%Y-%m-%dT%H:%M:%SZ");
-
 export interface CDNConfig {
   accessKeyId: string;
-  secretAccessKey: string;
+  accessKeySecret: string;
   endpoint?: string;
   client?: AxiosInstance;
 }
@@ -56,7 +54,7 @@ export class CDN {
   async request(url: string, type: RefreshObjectType) {
     const params = this.makeRefreshRequestParams(url, type);
     const result = await this.client.get(this.baseUrl, { params: params });
-    console.log(result.data)
+    console.log(result.data);
     if (result.data && typeof result.data === "string") {
       result.data = JSON.parse(result.data);
     }
@@ -83,7 +81,7 @@ export class CDN {
     params.Signature = signRequest(
       "GET",
       params as any,
-      this.config.secretAccessKey
+      this.config.accessKeySecret || (this.config as any).secretAccessKey
     );
     return params;
   }
