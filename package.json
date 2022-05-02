@@ -29,7 +29,6 @@
     "lib"
   ],
   "devDependencies": {
-    "@types/d3-time-format": "^4.0.0",
     "@types/jest": "^27.4.1",
     "@types/node": "^17.0.30",
     "@types/uuid": "^8.3.4",
