@@ -27,11 +27,25 @@ test("test refresh dir", async () => {
 });
 
 test("test refresh file", async () => {
-  const fileToBeRefreshed = process.env.FILE_TO_BE_REFRESHED;
+  const fileToBeRefreshed = process.env.FILE_TO_BE_REFRESHED_0;
   const res = await cdn.refreshFile(fileToBeRefreshed);
 
   const {RequestId, RefreshTaskId} = res.data;
 
   expect(!!RequestId).toBeTruthy();
   expect(!!RefreshTaskId).toBeTruthy();
+});
+
+test("test refresh multi files", async () => {
+  const filesToBeRefreshed = [
+    process.env.FILE_TO_BE_REFRESHED_0,
+    process.env.FILE_TO_BE_REFRESHED_1
+  ];
+  const responses = await cdn.refreshFiles(filesToBeRefreshed);
+
+  for (let res of responses) {
+    const {RequestId, RefreshTaskId} = res.data;
+    expect(!!RequestId).toBeTruthy();
+    expect(!!RefreshTaskId).toBeTruthy();
+  }
 });

@@ -19,13 +19,14 @@ import { CDN } from 'refresh-aliyun-cdn';
 
 const cdn = new CDN({
   accessKeyId: "a key",
-  accessKeySecret: "a secret",
-  endpoint: "https://cdn.aliyuncs.com"
+  accessKeySecret: "a secret"
 });
 
 (async () => {
   const res = await cdn.refreshFile("a url");
-  console.log(res.data);
+  const result:RefreshResult = res.data; 
+  
+  console.log(result);
 })();
 
 ```
