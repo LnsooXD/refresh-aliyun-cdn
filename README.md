@@ -64,8 +64,6 @@ npm i -S refresh-aliyun-cdn
 
 * [axios](https://github.com/axios/axios)
 
-* [d3-time-format](https://github.com/d3/d3-time-format)
-
 * [uuid](https://github.com/uuidjs/uuid)
 
 ## Authors
