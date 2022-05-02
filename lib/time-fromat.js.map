@@ -1,1 +1,1 @@
-{"version":3,"file":"time-fromat.js","sourceRoot":"","sources":["../src/time-fromat.ts"],"names":[],"mappings":";;;AAAA,qCAAqC;AAExB,QAAA,UAAU,GAAG,EAAE,CAAC,SAAS,CAAC,oBAAoB,CAAC,CAAC"}
+{"version":3,"file":"time-fromat.js","sourceRoot":"","sources":["../src/time-fromat.ts"],"names":[],"mappings":";;;AAAO,MAAM,UAAU,GAAG,CAAC,IAAU,EAAE,EAAE;IACrC,OAAO,IAAI,CAAC,WAAW,EAAE,CAAC;AAC9B,CAAC,CAAC;AAFW,QAAA,UAAU,cAErB"}

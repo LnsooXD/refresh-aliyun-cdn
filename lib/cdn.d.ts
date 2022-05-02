@@ -3,8 +3,8 @@
  * Copyright(c) 2016 LnsooXD <LnsooXD@gmail.com>
  * MIT Licensed
  */
-import { RefreshObjectType } from "./defines";
-import { AxiosInstance } from "axios";
+import { RefreshObjectType, RefreshResult } from "./defines";
+import { AxiosInstance, AxiosResponse } from "axios";
 export interface CDNConfig {
     accessKeyId: string;
     accessKeySecret: string;
@@ -16,9 +16,9 @@ export declare class CDN {
     private baseUrl;
     private client;
     constructor(config: CDNConfig);
-    refreshFile(url: string): Promise<import("axios").AxiosResponse<any, any>>;
-    refreshDir(url: string): Promise<import("axios").AxiosResponse<any, any>>;
-    refreshFiles(urls: string[]): Promise<import("axios").AxiosResponse<any, any>[]>;
-    request(url: string, type: RefreshObjectType): Promise<import("axios").AxiosResponse<any, any>>;
+    refreshFile(url: string): Promise<AxiosResponse<RefreshResult, any>>;
+    refreshDir(url: string): Promise<AxiosResponse<RefreshResult, any>>;
+    refreshFiles(urls: string[]): Promise<AxiosResponse<RefreshResult, any>[]>;
+    request(url: string, type: RefreshObjectType): Promise<AxiosResponse<RefreshResult, any>>;
     private makeRefreshRequestParams;
 }

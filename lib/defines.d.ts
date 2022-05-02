@@ -17,3 +17,7 @@ export interface RefreshRequestParams extends BaseRequestParams {
     ObjectPath: string;
     ObjectType: RefreshObjectType;
 }
+export interface RefreshResult {
+    RequestId: string;
+    RefreshTaskId: string;
+}

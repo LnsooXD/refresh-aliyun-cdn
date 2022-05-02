@@ -7,10 +7,14 @@
 "use strict";
 
 import libConfig from "./config";
-import {timeFromat} from "./time-fromat";
+import { timeFromat } from "./time-fromat";
 import { v4 as signatureNonce } from "uuid";
-import { RefreshRequestParams, RefreshObjectType } from "./defines";
-import Axios, { AxiosInstance } from "axios";
+import {
+  RefreshRequestParams,
+  RefreshObjectType,
+  RefreshResult,
+} from "./defines";
+import Axios, { AxiosInstance, AxiosResponse } from "axios";
 import { signRequest } from "./util";
 
 export interface CDNConfig {
@@ -51,10 +55,12 @@ export class CDN {
     return Promise.all(urls.map((url) => this.refreshFile(url)));
   }
 
-  async request(url: string, type: RefreshObjectType) {
+  async request(
+    url: string,
+    type: RefreshObjectType
+  ): Promise<AxiosResponse<RefreshResult, any>> {
     const params = this.makeRefreshRequestParams(url, type);
     const result = await this.client.get(this.baseUrl, { params: params });
-    console.log(result.data);
     if (result.data && typeof result.data === "string") {
       result.data = JSON.parse(result.data);
     }
